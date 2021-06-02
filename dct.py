@@ -1,28 +1,29 @@
 import math
 
 def dct(img):
-    n = len(img)
-    const = (2/n)**(1/2)
+    numAms = len(img)
+    const = (2/numAms)**(0.5)
     constpi = 2*3.14
 
     c = 1
 
-    result = []
+    result = img[:]
 
     #print(img)
     
-    for k in range(n):
-        #print(k)
+    for k in range(numAms):
         x = img[k] 
 
-        precos = (constpi * n * k)/(2*n) + (k*3.14)/(2*n)
-        cos = math.cos(precos)
+        for n in range(numAms):
 
-        if( k != 0):
-            c = (1/2)**1/2 
+            precos = (constpi * n * k)/(2*numAms) + (k*3.14)/(2*numAms)
+            cos = math.cos(precos)
             
-        result.append(x * c * cos)
-        c = 1
+            if( k == 0 ):
+                c = (1/2)**0.5
+            
+            result[k] += (const* x * c * cos)
+            c = 1
         
     return result 
     
