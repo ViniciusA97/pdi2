@@ -9,13 +9,13 @@ def dct(img):
 
     result = img[:]
 
-    #print(img)
+    #print(img)S
     
     for k in range(numAms):
-        x = img[k] 
+
+        x = img[k]
 
         for n in range(numAms):
-
             precos = (constpi * n * k)/(2*numAms) + (k*3.14)/(2*numAms)
             cos = math.cos(precos)
             

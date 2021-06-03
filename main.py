@@ -8,7 +8,7 @@ img = cv.imread("./sources/lena.jpg")
 result = img[:]
 result2 = []
 
-result = np.float32(img)
+img = np.float32(img)/255
 #print(result)
 for i in range(len(img)):
     bandaRLinha = utils.getArrayBandaLine(img, 0 , i) 
@@ -47,21 +47,25 @@ for j in range(len(img[0])):
 
 #print(result)
 
-print(result)
+#print(result)
+
 
 abs = np.abs(result)
 
 max = max(max(max(result.tolist())))
 
-print(max)
+#print(max)
 
-result =  np.uint8(result)
-result = result / max
+#result =  np.uint8(result)
+result = np.uint8(result)/255
+#result = result / max
 
-print(result)
+#print(result)
 cv.imshow("window_name", result)
 cv.waitKey(0)   
 cv.destroyAllWindows() 
+
+utils.printImg(result)
 
 cv.imwrite("./sources/result.jpg",result)
 
@@ -72,3 +76,4 @@ cv.imwrite("./sources/result.jpg",result)
 #   [ col , col , col  ]
 #   [ col , col , col  ] 
 # ]
+
