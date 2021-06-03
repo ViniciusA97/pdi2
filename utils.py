@@ -1,6 +1,6 @@
 def getArrayBandaLine(img, i, line):
     result = []
-    for x in range(len(img[0])):
+    for x in range(len(img)):
         result.append(img[line][x][i])
     return result
 
