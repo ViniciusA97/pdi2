@@ -28,5 +28,3 @@ def dct(img):
         c = 1
         
     return result 
-    
-                
