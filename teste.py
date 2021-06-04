@@ -3,14 +3,10 @@ import cv2 as cv
 import utils
 import numpy as np
 
-img = cv.imread("./sources/lena.jpg",0 )
+x = [1,2,3,4,5,56]
+a = x[:]
 
-imf = np.float32(img)/255.0  # float conversion/scale
-dst = cv.dct(imf)           # the dct
-
-img = np.uint8(dst)*255.0
-
-cv.imshow("lala",img)
-cv.waitKey(0)   
-cv.destroyAllWindows() 
-cv.imwrite("./sources/resultdctopcv.jpg", img)
+a[0] = 99999
+a[1] = [111111111111111111111111111111111]
+print(a)
+print(x)

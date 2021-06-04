@@ -3,23 +3,15 @@ import cv2 as cv
 import utils
 import numpy as np
 
-img = cv.imread("./sources/r.jpg")
 
-print(img)
-print("---linha ---")
-x = utils.getArrayBandaLine(img,0,1)
-print(x)
-print("---col ---")
-y = utils.getArrayBandaCol(img,0,1)
-print(y)
+linha = [33 , 124, 97]
 
-result = img [:]
-i= 0
-for k in range(len(x)):
-        #pixel = [dataR[k] , dataG[k], dataB[k]]
-    result[k][i][0] = 199
-    result[k][i][1] = 199
-    result[k][i][2] = 199
+rdct = dct.dct(linha)
 
-    
-print(result)
+ridct = np.uint8(np.around(dct.idct(rdct)))
+ridct = np.uint8(np.around(dct.idct(ridct)))
+
+print("dct:", rdct)
+print("-=----")
+print("idct:",ridct)
+
