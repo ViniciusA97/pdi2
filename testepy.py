@@ -4,12 +4,11 @@ import utils
 import numpy as np
 
 
-linha = [33 , 124, 97]
+linha = [154 , 124, 97]
 
 rdct = dct.dct(linha)
 
-ridct = np.uint8(np.around(dct.idct(rdct)))
-ridct = np.uint8(np.around(dct.idct(ridct)))
+ridct = np.uint(dct.idct(rdct))
 
 print("dct:", rdct)
 print("-=----")
