@@ -13,7 +13,7 @@ print("Iniciando DCT")
 for i in range(len(result)):
     bandaRLinha = utils.getArrayBandaLine(img, 0 , i) 
     
-    dataR = dct.idct(bandaRLinha)
+    dataR = dct.dct(bandaRLinha)
 
     pixel = []
     line = []
@@ -44,7 +44,7 @@ resultIDCT = np.copy(result)
 for i in range(len(resultDCT)):
     bandaRLinha = utils.getArrayBandaLine(result, 0 , i) 
     
-    dataR = dct.dct(bandaRLinha)
+    dataR = dct.idct(bandaRLinha)
 
     pixel = []
     line = []
