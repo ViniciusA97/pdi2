@@ -50,7 +50,6 @@ def idct(img):
             precos = (constpi * n * k)/(2*numAms) + (k*3.14)/(2*numAms)
             cos = math.cos(precos)
             result[n] += (const* c* x * cos)
-        #result[k] = result[k] * c
         c = 1
         
     return result 

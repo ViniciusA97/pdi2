@@ -16,7 +16,7 @@ print("Tamanho do array ", len(values))
 print("Arquivo: ", file)
 print("---------- INICIANDO PROCESSAMENTO DE AUDIO 2.3 ---------------")
 
-k = 20000
+k = 1000
 
 print("Iniciando dct...")
 ydct = dct.dct(values)
